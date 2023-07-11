@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Time</title>
+   
+    <!-- <link rel="stylesheet" href="stylepiano.css"> -->
+    <style>
+        .container{
+    background-color: black;
+    /* color: white; */
+    width: 27px;
+    height: 200px;
+    margin-left: 6px;
+    margin-right: 5px;
+    box-shadow: 4px 4px 5px rgb(255, 255, 255);
+    border-radius: 2px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    
+    
+}
+.container:hover{
+    cursor: pointer;
+}
+.upper{
+    height: 40px;
+    width: 350px;
+    color: black;
+}
+.pressed {
+    box-shadow: 5px 10px 5px rgb(211, 206, 206); 
+    background-color: white;
+    color: white;
+
+}
+body{
+    /* background-color: antiquewhite; */
+    color: black;
+    text-shadow: 0.5px 0.5px 1px rgb(41, 38, 38);
+    background: rgb(240,183,161);
+    background: -moz-linear-gradient(-45deg,  rgba(240,183,161,1) 0%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 51%, rgba(191,110,78,1) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(240,183,161,1)), color-stop(50%,rgba(140,51,16,1)), color-stop(51%,rgba(117,34,1,1)), color-stop(100%,rgba(191,110,78,1)));
+    background: -webkit-linear-gradient(-45deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+    background: -o-linear-gradient(-45deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+    background: -ms-linear-gradient(-45deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+    background: linear-gradient(135deg,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 );
+
+}
+.button-shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <h1>
+            !!!WELCOME TO THE WORLD OUT OF CHAOS!!!
+        </h1>
+        <h3>Just click any button on your screen or press any key and feel the vibe</h3>
+        <table style=" border-radius: 10px;
+        background-color: #000000;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 15px 15px 10px rgb(0, 0, 0);
+        transform: perspective(800px) rotateX(30deg);
+        padding-right: 20px;
+        padding-left: 20px;">
+            <tr>
+                <div class="upper"></div>
+            </tr>
+            <tr>
+                <td>
+                    <button id="one" class="container">a</button>
+                </td>
+                <td>
+                    <button class="container">b</button>
+                </td>
+                <td>
+                    <button class="container">c</button>
+                </td>
+                <td>
+                    <button class="container">d</button>
+                </td>
+                <td>
+                    <button class="container">e</button>
+                </td>
+                <td>
+                    <button class="container">f</button>
+                </td>
+                <td>
+                    <button class="container">g</button>
+                </td>
+                <td>
+                    <button class="container">i</button>
+                </td>
+                <td>
+                    <button class="container">i</button>
+                </td>
+                <td>
+                    <button class="container">j</button>
+                </td>
+                <td>
+                    <button class="container">k</button>
+                </td>
+                <td>
+                    <button class="container">l</button>
+                </td>
+                <td>
+                    <button class="container">m</button>
+                </td>
+
+                <td>
+                    <button class="container">n</button>
+                </td>
+                <td>
+                    <button class="container">o</button>
+                </td>
+                <td>
+                    <button class="container">p</button>
+                </td>
+                <td>
+                    <button class="container">q</button>
+                </td>
+                <td>
+                    <button class="container">r</button>
+                </td>
+                <td>
+                    <button class="container">s</button>
+                </td>
+                <td>
+                    <button class="container">t</button>
+                </td>
+                <td>
+                    <button class="container">u</button>
+                </td>
+                <td>
+                    <button class="container">v</button>
+                </td>
+                <td>
+                    <button class="container">w</button>
+                </td>
+                <td>
+                    <button class="container">x</button>
+                </td>
+                <td>
+                    <button class="container">y</button>
+                </td>
+                <td>
+                    <button class="container">z</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+    <!-- <script src="indexpiano.js"></script> -->
+    <script>
+        var len = document.querySelectorAll(".container").length;
+for (var i = 0; i < len; i++) {
+  document.querySelectorAll("button")[i].addEventListener("click", function () {
+    var ch = this.innerHTML.toLowerCase();
+    soundKeys(ch);
+    // buttonAnimation(ch);
+
+    switch (ch) {
+      case "a":
+        var a1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        a1.play();
+        break;
+      case "b":
+        var b1 = new Audio("https://github.com/Udays28/piano/blob/main/.crash.mp3");
+        b1.play();
+        break;
+      case "c":
+        var c1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-2.mp3");
+        c1.play();
+        break;
+      case "d":
+        var d1 = new Audio("https://github.com/Udays28/piano/blob/main/.snare.mp3");
+        d1.play();
+        break;
+      case "e":
+        var e1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-3.mp3");
+        e1.play();
+        break;
+      case "f":
+        var f1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-4.mp3");
+        f1.play();
+        break;
+      case "g":
+        var g1 = new Audio("https://github.com/Udays28/piano/blob/main/.kick-bass.mp3");
+        g1.play();
+        break;
+      case "h":
+        var h1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        h1.play();
+        break;
+      case "i":
+        var i1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        i1.play();
+        break;
+      case "j":
+        var j1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        j1.play();
+        break;
+      case "k":
+        var k1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        k1.play();
+        break;
+      case "l":
+        var l1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        l1.play();
+        break;
+      case "m":
+        var m1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        m1.play();
+        break;
+      case "n":
+        var n1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        n1.play();
+        break;
+      case "o":
+        var o1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        o1.play();
+        break;
+      case "p":
+        var p1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        p1.play();
+        break;
+      case "q":
+        var q1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        q1.play();
+        break;
+      case "r":
+        var r1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        r1.play();
+        break;
+      case "s":
+        var s1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        s1.play();
+        break;
+      case "t":
+        var t1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        t1.play();
+        break;
+      case "u":
+        var u1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        u1.play();
+        break;
+      case "v":
+        var v1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        v1.play();
+        break;
+      case "w":
+        var w1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        w1.play();
+        break;
+      case "x":
+        var x1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        x1.play();
+        break;
+      case "y":
+        var y1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        y1.play();
+        break;
+      case "z":
+        var z1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+        z1.play();
+        break;
+      default:
+        console.log("Nothing found");
+        break;
+    }
+  });
+}
+
+document.addEventListener("keypress", function (event) {
+  soundKeys(event.key.toLowerCase());
+  buttonAnimation(event.key);
+});
+
+function soundKeys(key) {
+  switch (key) {
+    case "a":
+      var a1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+      a1.play();
+      break;
+    case "b":
+      var b1 = new Audio("https://github.com/Udays28/piano/blob/main/.crash.mp3");
+      b1.play();
+      break;
+    case "c":
+      var c1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-2.mp3");
+      c1.play();
+      break;
+    case "d":
+      var d1 = new Audio("https://github.com/Udays28/piano/blob/main/.snare.mp3");
+      d1.play();
+      break;
+    case "e":
+      var e1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-3.mp3");
+      e1.play();
+      break;
+    case "f":
+      var f1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-4.mp3");
+      f1.play();
+      break;
+    case "g":
+      var g1 = new Audio("https://github.com/Udays28/piano/blob/main/.kick-bass.mp3");
+      g1.play();
+      break;
+    case "h":
+      var h1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+      h1.play();
+      break;
+    case "i":
+      var i1 = new Audio("https://github.com/Udays28/piano/blob/main/.snare.mp3");
+      i1.play();
+      break;
+    case "j":
+      var j1 = new Audio("https://github.com/Udays28/piano/blob/main/.kick-bass.mp3");
+      j1.play();
+      break;
+    case "k":
+      var k1 = new Audio("https://github.com/Udays28/piano/blob/main/.crash.mp3");
+      k1.play();
+      break;
+    case "l":
+      var l1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+      l1.play();
+      break;
+    case "m":
+      var m1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+      m1.play();
+      break;
+    case "n":
+      var n1 = new Audio("https://github.com/Udays28/piano/blob/main/.crash.mp3");
+      n1.play();
+      break;
+    case "o":
+      var o1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-2.mp3");
+      o1.play();
+      break;
+    case "p":
+      var p1 = new Audio("https://github.com/Udays28/piano/blob/main/.snare.mp3");
+      p1.play();
+      break;
+    case "q":
+      var q1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-4.mp3");
+      q1.play();
+      break;
+    case "r":
+      var r1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-3.mp3");
+      r1.play();
+      break;
+    case "s":
+      var s1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-2.mp3");
+      s1.play();
+      break;
+    case "t":
+      var t1 = new Audio("https://github.com/Udays28/piano/blob/main/.kick-bass.mp3");
+      t1.play();
+      break;
+    case "u":
+      var u1 = new Audio("https://github.com/Udays28/piano/blob/main/.snare.mp3");
+      u1.play();
+      break;
+    case "v":
+      var v1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-2.mp3");
+      v1.play();
+      break;
+    case "w":
+      var w1 = new Audio("https://github.com/Udays28/piano/blob/main/.crash.mp3");
+      w1.play();
+      break;
+    case "x":
+      var x1 = new Audio("https://github.com/Udays28/piano/blob/main/.tom-1.mp3");
+      x1.play();
+      break;
+    case "y":
+      var y1 = new Audio("https://github.com/Udays28/piano/blob/main/.snare.mp3");
+      y1.play();
+      break;
+    case "z":
+      var z1 = new Audio("soundshttps://github.com/Udays28/piano/blob/main/.kick-bass.mp3");
+      z1.play();
+      break;
+    default:
+      console.log("Nothing found");
+      break;
+  }
+}
+
+
+var buttons = document.querySelectorAll(".container");
+
+// Click event listener
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var ch = button.innerHTML.toLowerCase();
+    soundKeys(ch);
+    button.classList.add("pressed");
+    setTimeout(function () {
+      button.classList.remove("pressed");
+    }, 200);
+  });
+});
+
+// Keydown event listener
+document.addEventListener("keypress", function (event) {
+  var key = event.key.toLowerCase();
+  var button = Array.from(buttons).find(function (btn) {
+    return btn.innerHTML.toLowerCase() === key;
+  });
+  if (button) {
+    soundKeys(key);
+    button.classList.add("pressed");
+    setTimeout(function () {
+      button.classList.remove("pressed");
+    }, 200);
+  }
+});
+
+    </script>
+</body>
+
+</html>
